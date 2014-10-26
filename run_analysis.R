@@ -6,36 +6,12 @@ run_analysis.R
 			test_x <- read.delim("X_test.txt", header=FALSE, sep="", stringsAsFactors=FALSE)
 			test_y <- read.delim("Y_test.txt", header=FALSE, sep="")
 			test_s <- read.delim("subject_test.txt", header=FALSE, sep="")
-		#	load all files in Inertial Signals Folder
-		setwd("./Inertial Signals")
-			testfiles <- list.files(full.names=TRUE)
-				test1 <- read.delim(testfiles[1], header=FALSE, sep="")
-				test2 <- read.delim(testfiles[2], header=FALSE, sep="")
-				test3 <- read.delim(testfiles[3], header=FALSE, sep="")
-				test4 <- read.delim(testfiles[4], header=FALSE, sep="")
-				test5 <- read.delim(testfiles[5], header=FALSE, sep="")
-				test6 <- read.delim(testfiles[6], header=FALSE, sep="")
-				test7 <- read.delim(testfiles[7], header=FALSE, sep="")
-				test8 <- read.delim(testfiles[8], header=FALSE, sep="")
-				test9 <- read.delim(testfiles[9], header=FALSE, sep="")
 	
 	#	load training data
 		setwd("~/train")
 			train_x <- read.delim("X_train.txt", header=FALSE, sep="", stringsAsFactors=FALSE)
 			train_y <- read.delim("Y_train.txt", header=FALSE, sep="")
 			train_s <- read.delim("subject_train.txt", header=FALSE, sep="")
-	#	load all files in Inertial Signals Folder
-		setwd("./Inertial Signals")
-			trainfiles <- list.files(full.names=TRUE)
-				train1 <- read.delim(trainfiles[1], header=FALSE, sep="")
-				train2 <- read.delim(trainfiles[2], header=FALSE, sep="")
-				train3 <- read.delim(trainfiles[3], header=FALSE, sep="")
-				train4 <- read.delim(trainfiles[4], header=FALSE, sep="")
-				train5 <- read.delim(trainfiles[5], header=FALSE, sep="")
-				train6 <- read.delim(trainfiles[6], header=FALSE, sep="")
-				train7 <- read.delim(trainfiles[7], header=FALSE, sep="")
-				train8 <- read.delim(trainfiles[8], header=FALSE, sep="")
-				train9 <- read.delim(trainfiles[9], header=FALSE, sep="")
 
 	#	merge data
 			testdf <- cbind(test_s,test_y,test_x)
